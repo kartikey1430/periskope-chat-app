@@ -1,14 +1,10 @@
-import Head from 'next/head'
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Periskope Chat</title>
-      </Head>
-      <div className="flex items-center justify-center h-screen bg-gray-100 text-2xl font-semibold">
-        Periskope Chat App is Running!
-      </div>
-    </>
-  )
+  const router = useRouter();
+  useEffect(() => {
+    router.push("/chats");
+  }, []);
+  return null;
 }
